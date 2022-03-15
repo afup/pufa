@@ -80,9 +80,9 @@ export default class Input {
     switch (clavier) {
       case ClavierDisposition.Bépo:
         return [
-          ["B", "E", "P", "O", "V", "D", "L", "J", "Z", "W"],
-          ["A", "U", "I", "E", "C", "T", "S", "R", "N", "M"],
-          ["Y", "X", "K", "Q", "G", "H", "F", "_effacer", "_entree"],
+          ["B", "E", "P", "O", "W", "V", "D", "L", "J", "Z"],
+          ["A", "U", "I", "C", "T", "S", "R", "N", "M"],
+          ["_effacer", "Y", "X", "K", "Q", "G", "H", "F", "_entree"],
         ];
       case ClavierDisposition.Qwerty:
         return [
