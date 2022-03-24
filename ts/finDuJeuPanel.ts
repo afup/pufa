@@ -8,13 +8,11 @@ export default class FinDuJeuPanel {
   }
 
   public afficher(): void {
-    let titre = "Fermeture de SUTOM";
+    let titre = "SUTOM continue";
     let contenu =
       "<p>" +
-      "Suite à une demande de la part de France Télévisions de ne plus utiliser le mot « SUTOM », j'ai décidé de fermer le jeu.<br />" +
-      "Le dernier mot sera vendredi 25 mars.<br />" +
-      "Merci à toutes les personnes qui ont joué.<br />" +
-      'Vous pouvez retrouver plus d\'informations concernant cette fermeture sur <a target="_blank" href="https://twitter.com/Jonamaths/status/1506899535947345921">mon compte twitter, et le thread associé</a>.<br />' +
+      "Suite à la prise de contact de France Télévisions, des discussions ont été entamées, et j'ai le plaisir de vous annoncer que le jeu restera en ligne !<br />" +
+      "Merci à toutes et tous pour votre incroyable soutien et tous vos gentils messages :)<br />" +
       "<br />" +
       "Jonathan" +
       "</p>";
