@@ -17,7 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node public/js/server.js",
-    "start:dev": "tsc && node public/js/server.js & tsc-watch"
+    "start:dev": "tsc && node public/js/server.js & tsc-watch",
+    "start:prod": "node public/js/server.js"
   },
   "keywords": [
     "wordle",

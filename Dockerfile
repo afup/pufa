@@ -11,7 +11,8 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+RUN ./node_modules/.bin/tsc
 
 EXPOSE 4000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start:prod"]
