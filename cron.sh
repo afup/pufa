@@ -1,5 +1,5 @@
 #!/bin/bash
 
-npm install
+npm ci
 node utils/majATrouver.js
 tsc
