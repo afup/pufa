@@ -18,7 +18,8 @@ export default class FinDePartiePanel {
   private _partieEstFinie: boolean = false;
 
   public constructor(datePartie: Date, panelManager: PanelManager) {
-    this._datePartie = datePartie;
+    this._datePartie = new Date(datePartie);
+    this._datePartie.setHours(0, 0, 0);
     this._panelManager = panelManager;
     this._statsButton = document.getElementById("configuration-stats-bouton") as HTMLElement;
 
@@ -66,7 +67,7 @@ export default class FinDePartiePanel {
     this._estVictoire = estBonneReponse;
     this._partieEstFinie = true;
 
-    let numeroGrille = Math.floor((dateGrille - origine) / (24 * 3600 * 1000)) + 1;
+    let numeroGrille = Math.round((dateGrille - origine) / (24 * 3600 * 1000)) + 1;
 
     let afficherChrono = (Sauvegardeur.chargerConfig() ?? Configuration.Default).afficherChrono;
 
