@@ -114,6 +114,7 @@ export default class Gestionnaire {
   private async chargerPropositions(propositions: Array<string> | undefined): Promise<void> {
     if (!propositions || propositions.length === 0) return;
     for (let mot of propositions) {
+      if (this._input) this._input.bloquer(ContexteBloquage.ValidationMot);
       await this.verifierMot(mot, true);
     }
   }
