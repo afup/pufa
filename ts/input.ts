@@ -167,11 +167,34 @@ export default class Input {
     if (this.estBloque()) return;
     this.bloquer(ContexteBloquage.ValidationMot);
     let mot = this._motSaisi;
+    // Cas particulier : Si le préremplissage donne un mot complet
+    let statutJeu = this.siPreremplissageEstReponse();
+    if (statutJeu.preRempli && statutJeu.mot) {
+      mot = statutJeu.mot;
+    }
     let isMotValide = await this._gestionnaire.verifierMot(mot);
     if (isMotValide) {
       // Si le mot est valide, alors c'est la grille qui nous débloque
       this._motSaisi = "";
     } else this.debloquer(ContexteBloquage.ValidationMot);
+  }
+
+  private siPreremplissageEstReponse(): { preRempli: boolean; mot?: string } {
+    let lettrePrerempli = new Array<{ preRempli: boolean; lettre?: string }>();
+    for (let i = 0; i < this._longueurMot; i++) lettrePrerempli.push({ preRempli: false });
+
+    for (let resultat of this._resultats) {
+      for (let positionResultat in resultat) {
+        let lettreResultat = resultat[positionResultat];
+        if (lettreResultat.statut === LettreStatut.BienPlace) lettrePrerempli[positionResultat] = { preRempli: true, lettre: lettreResultat.lettre };
+      }
+    }
+
+    if (lettrePrerempli.every((lettre) => lettre.preRempli)) {
+      return { preRempli: true, mot: lettrePrerempli.reduce((mot, lettre) => mot + lettre.lettre, "") };
+    }
+
+    return { preRempli: false };
   }
 
   private saisirLettre(lettre: string): void {
