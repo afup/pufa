@@ -123,10 +123,10 @@ export default class FinDePartiePanel {
             })
         )
         .then(() => {
-          NotificationMessage.ajouterNotificationPanel("Résumé copié dans le presse papier");
+          NotificationMessage.ajouterNotificationPanel("Résumé copié dans le presse-papier.");
         })
         .catch((raison) => {
-          NotificationMessage.ajouterNotificationPanel("Votre navigateur n'est pas compatible");
+          NotificationMessage.ajouterNotificationPanel("Votre navigateur n'est pas compatible.");
         });
     });
   }
