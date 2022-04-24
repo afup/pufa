@@ -1,0 +1,19 @@
+{
+  "name": "SUTOM",
+  "short_name": "SUTOM",
+  "description": "Jeu de lettres SUTOM. Trouverez-vous le mot du jour ?",
+  "theme_color": "#ffbd00",
+  "background_color": "#2b2b2b",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "lang": "fr-FR"
+}
