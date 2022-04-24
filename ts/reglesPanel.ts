@@ -24,6 +24,7 @@ export default class ReglesPanel {
       "<p>" +
       "Vous avez six essais pour deviner le mot du jour, entre 6 et 9 lettres, commun à tous.<br />" +
       "Vous ne pouvez proposer que des mots commençant par la même lettre que le mot recherché, et qui se trouvent dans notre dictionnaire.<br />" +
+      "Les noms propres ne sont pas acceptés.<br />" +
       "Le mot change chaque jour. Évitez donc les spoils et privilégiez le bouton de partage.<br />" +
       "</p>" +
       '<div class="grille">' +
