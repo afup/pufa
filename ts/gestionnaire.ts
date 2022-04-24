@@ -170,15 +170,20 @@ export default class Gestionnaire {
     mot = Dictionnaire.nettoyerMot(mot);
     //console.debug(mot + " => " + (Dictionnaire.estMotValide(mot) ? "Oui" : "non"));
     if (mot.length !== this._motATrouver.length) {
-      NotificationMessage.ajouterNotification("Le mot proposé est trop court");
+      NotificationMessage.ajouterNotification("Le mot proposé est trop court.");
       return false;
     }
+    if (mot.includes(".")) {
+      NotificationMessage.ajouterNotification("Votre mot ne doit contenir que des lettres.");
+      return false;
+    }
+
     if (mot[0] !== this._motATrouver[0]) {
-      NotificationMessage.ajouterNotification("Le mot proposé doit commencer par la même lettre que le mot recherché");
+      NotificationMessage.ajouterNotification("Le mot proposé doit commencer par la même lettre que le mot recherché.");
       return false;
     }
     if (!(await Dictionnaire.estMotValide(mot, this._motATrouver[0], this._motATrouver.length))) {
-      NotificationMessage.ajouterNotification("Ce mot n'est pas dans notre dictionnaire");
+      NotificationMessage.ajouterNotification("Ce mot n'est pas dans notre dictionnaire.");
       return false;
     }
     if (!this._datePartieEnCours) this._datePartieEnCours = new Date();
