@@ -82,25 +82,25 @@ export default class Input {
         return [
           ["B", "E", "P", "O", "W", "V", "D", "L", "J", "Z"],
           ["A", "U", "I", "E", "C", "T", "S", "R", "N", "M"],
-          ["_effacer", "Y", "X", ".", "K", "Q", "G", "H", "F", "_entree"],
+          ["_effacer", "Y", "X", "_", "K", "Q", "G", "H", "F", "_entree"],
         ];
       case ClavierDisposition.Qwerty:
         return [
           ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
           ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
-          [".", "Z", "X", "C", "V", "B", "N", "M", "_effacer", "_entree"],
+          ["_", "Z", "X", "C", "V", "B", "N", "M", "_effacer", "_entree"],
         ];
       case ClavierDisposition.Qwertz:
         return [
           ["Q", "W", "E", "R", "T", "Z", "U", "I", "O", "P"],
           ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
-          [".", "Y", "X", "C", "V", "B", "N", "M", "_effacer", "_entree"],
+          ["_", "Y", "X", "C", "V", "B", "N", "M", "_effacer", "_entree"],
         ];
       default:
         return [
           ["A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P"],
           ["Q", "S", "D", "F", "G", "H", "J", "K", "L", "M"],
-          ["_vide", ".", "W", "X", "C", "V", "B", "N", "_effacer", "_entree"],
+          ["_vide", "_", "W", "X", "C", "V", "B", "N", "_effacer", "_entree"],
         ];
     }
   }
@@ -134,7 +134,7 @@ export default class Input {
 
         if (touche === "Enter") {
           this.validerMot();
-        } else if (/^[A-Z.]$/.test(Dictionnaire.nettoyerMot(touche))) {
+        } else if (/^[A-Z_]$/.test(Dictionnaire.nettoyerMot(touche))) {
           this.saisirLettre(touche);
         }
       }).bind(this)
