@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 "use strict";
 /**
  * Petit script qui nettoie le fichier des mots à trouver pour le mettre dans le format attendu par le système
