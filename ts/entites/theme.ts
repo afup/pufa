@@ -3,4 +3,5 @@ export enum Theme {
   Clair,
   SombreAccessible,
   ClairAccessible,
+  AFUP
 }
