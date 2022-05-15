@@ -1,5 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-npm ci
-node utils/majATrouver.js
-tsc
+./utils/genererMotTrouve.js
+./utils/majATrouver.js
+
+#npm ci
+#node utils/majATrouver.js
+#tsc

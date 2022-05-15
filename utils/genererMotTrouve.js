@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 "use strict";
 
 /**
@@ -7,11 +9,9 @@ var fs = require("fs");
 var readlineSync = require("readline-sync");
 
 function start() {
-  let motsGardes = [];
   fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
     //console.log(erreur);
     var dictionnaire = contenu.split("\n");
-    while (true) {
       var motTrouve = false;
       var mot = "";
       do {
@@ -34,12 +34,7 @@ function start() {
       } while (!motTrouve);
       console.log(mot);
 
-      let reponse = readlineSync.question("On garde ? [O]ui ou [N]on (ou [STOP])\n");
-      if (reponse.toLowerCase() === "stop") break;
-      let isGarde = reponse.toLowerCase() === "o";
-      if (isGarde) motsGardes.push(mot);
-    }
-    fs.appendFile("data/motsATrouve.txt", motsGardes.join("\n") + "\n", (err) => {
+    fs.appendFile("data_shared/motsATrouve.txt", mot + "\n", (err) => {
       if (err) {
         console.error(err);
         return;
