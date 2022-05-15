@@ -87,10 +87,7 @@ export default class ConfigurationPanel {
       this.genererConfigItem(
         "Thème",
         [
-          { value: Theme.Sombre.toString(), label: "Sombre" },
-          { value: Theme.Clair.toString(), label: "Clair" },
-          { value: Theme.SombreAccessible.toString(), label: "Sombre (Accessible)" },
-          { value: Theme.ClairAccessible.toString(), label: "Clair (Accessible)" },
+          { value: Theme.AFUP.toString(), label: "AFUP" },
         ],
         (config.theme ?? Configuration.Default.theme).toString(),
         (event: Event) => {

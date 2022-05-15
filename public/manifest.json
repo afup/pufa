@@ -1,7 +1,7 @@
 {
-  "name": "SUTOM",
-  "short_name": "SUTOM",
-  "description": "Jeu de lettres SUTOM. Trouverez-vous le mot du jour ?",
+  "name": "PUFA",
+  "short_name": "PUFA",
+  "description": "Jeu de lettres PUFA. Trouverez-vous le mot du jour ?",
   "theme_color": "#ffbd00",
   "background_color": "#2b2b2b",
   "display": "standalone",

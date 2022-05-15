@@ -2,12 +2,12 @@
   --taille-cellule: 48px;
   --epaisseur-bordure-cellule: 1px;
   --epaisseur-padding-cellule: 2px;
-  --couleur-bien-place: #e7002a;
-  --couleur-mal-place: #ffbd00;
-  --couleur-fond-grille: #0077c7;
+  --couleur-bien-place: #ed0678;
+  --couleur-mal-place: #36a7df;
+  --couleur-fond-grille: rgb(29, 34, 65);
   --couleur-non-trouve: rgb(112, 112, 112);
   --couleur-icone: rgb(200, 200, 200);
-  --couleur-fond-rgb: 43, 43, 43;
+  --couleur-fond-rgb: 29, 34, 65;
   --couleur-fond: rgb(var(--couleur-fond-rgb));
   --couleur-bordure: #ffffff;
   --couleur-bordure-grille: #ffffff;

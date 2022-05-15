@@ -9,7 +9,7 @@ export default class Configuration {
     afficherChrono: false,
     volumeSon: VolumeSon.Normal,
     disposition: ClavierDisposition.Azerty,
-    theme: Theme.Sombre,
+    theme: Theme.AFUP,
   };
 
   hasAudio: boolean = false;
@@ -17,5 +17,5 @@ export default class Configuration {
   afficherChrono: boolean = false;
   volumeSon: VolumeSon = VolumeSon.Normal;
   disposition: ClavierDisposition = ClavierDisposition.Azerty;
-  theme: Theme = Theme.Sombre;
+  theme: Theme = Theme.AFUP;
 }
