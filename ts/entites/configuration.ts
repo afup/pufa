@@ -9,7 +9,7 @@ export default class Configuration {
     afficherChrono: false,
     volumeSon: VolumeSon.Normal,
     disposition: ClavierDisposition.Azerty,
-    theme: Theme.Sombre,
+    theme: Theme.AFUP,
   };
 
   hasAudio: boolean = false;
