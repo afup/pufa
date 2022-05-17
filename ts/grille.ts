@@ -52,7 +52,7 @@ export default class Grille {
           let emoji: string = "🟦";
           switch (resultat.statut) {
             case LettreStatut.BienPlace:
-              emoji = "🟥";
+              emoji = "🟪";
               cellule.classList.add("bien-place", "resultat");
               break;
             case LettreStatut.MalPlace:
