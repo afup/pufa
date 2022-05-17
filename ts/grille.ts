@@ -49,7 +49,7 @@ export default class Grille {
         }
         if (this._resultats.length > nbMot && this._resultats[nbMot][nbLettre]) {
           let resultat = this._resultats[nbMot][nbLettre];
-          let emoji: string = "🟦";
+          let emoji: string = "⬛";
           switch (resultat.statut) {
             case LettreStatut.BienPlace:
               emoji = "🟪";
@@ -60,7 +60,7 @@ export default class Grille {
               cellule.classList.add("mal-place", "resultat");
               break;
             default:
-              emoji = "🟦";
+              emoji = "⬛";
               cellule.classList.add("non-trouve", "resultat");
           }
           // console.log(resultat.lettre + " => " + emoji);

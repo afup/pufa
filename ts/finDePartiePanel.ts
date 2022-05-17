@@ -42,7 +42,7 @@ export default class FinDePartiePanel {
             case LettreStatut.MalPlace:
               return ligne + "🔵";
             default:
-              return ligne + "🟦";
+              return ligne + "⬛";
           }
         }, "")
     );
@@ -57,7 +57,7 @@ export default class FinDePartiePanel {
             case LettreStatut.MalPlace:
               return ligne + '<span class="emoji-cercle-jaune">🔵</span>';
             default:
-              return ligne + '<span class="emoji-carre-bleu">🟦</span>';
+              return ligne + '<span class="emoji-carre-bleu">⬛</span>';
           }
         }, "")
     );
@@ -177,7 +177,7 @@ export default class FinDePartiePanel {
         '<div class="stats-cellule">' +
         `${stats.lettresRepartitions.bienPlace} 🟪 ` +
         `${stats.lettresRepartitions.malPlace} 🔵 ` +
-        `${stats.lettresRepartitions.nonTrouve} 🟦` +
+        `${stats.lettresRepartitions.nonTrouve} ⬛` +
         "</div>" +
         "</div>" +
         "</div>";
