@@ -38,11 +38,11 @@ export default class FinDePartiePanel {
         .reduce((ligne, statut) => {
           switch (statut) {
             case LettreStatut.BienPlace:
-              return ligne + "🟥";
+              return ligne + "🟪";
             case LettreStatut.MalPlace:
-              return ligne + "🟡";
+              return ligne + "🔵";
             default:
-              return ligne + "🟦";
+              return ligne + "⬛";
           }
         }, "")
     );
@@ -53,11 +53,11 @@ export default class FinDePartiePanel {
         .reduce((ligne, statut) => {
           switch (statut) {
             case LettreStatut.BienPlace:
-              return ligne + '<span class="emoji-carre-rouge">🟥</span>';
+              return ligne + '<span class="emoji-carre-rouge">🟪</span>';
             case LettreStatut.MalPlace:
-              return ligne + '<span class="emoji-cercle-jaune">🟡</span>';
+              return ligne + '<span class="emoji-cercle-jaune">🔵</span>';
             default:
-              return ligne + '<span class="emoji-carre-bleu">🟦</span>';
+              return ligne + '<span class="emoji-carre-bleu">⬛</span>';
           }
         }, "")
     );
@@ -175,9 +175,9 @@ export default class FinDePartiePanel {
         `<div class="stats-ligne"><div class="stats-cellule">Moyenne :</div><div class="stats-cellule">${this.getMoyenne(stats.repartition)}</div></div>` +
         '<div class="stats-ligne"><div class="stats-cellule">Lettres :</div>' +
         '<div class="stats-cellule">' +
-        `${stats.lettresRepartitions.bienPlace} 🟥 ` +
-        `${stats.lettresRepartitions.malPlace} 🟡 ` +
-        `${stats.lettresRepartitions.nonTrouve} 🟦` +
+        `${stats.lettresRepartitions.bienPlace} 🟪 ` +
+        `${stats.lettresRepartitions.malPlace} 🔵 ` +
+        `${stats.lettresRepartitions.nonTrouve} ⬛` +
         "</div>" +
         "</div>" +
         "</div>";
