@@ -56,7 +56,7 @@ export default class Grille {
               cellule.classList.add("bien-place", "resultat");
               break;
             case LettreStatut.MalPlace:
-              emoji = "🟡";
+              emoji = "🔵";
               cellule.classList.add("mal-place", "resultat");
               break;
             default:

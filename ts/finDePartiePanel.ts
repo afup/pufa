@@ -40,7 +40,7 @@ export default class FinDePartiePanel {
             case LettreStatut.BienPlace:
               return ligne + "🟪";
             case LettreStatut.MalPlace:
-              return ligne + "🟡";
+              return ligne + "🔵";
             default:
               return ligne + "🟦";
           }
@@ -55,7 +55,7 @@ export default class FinDePartiePanel {
             case LettreStatut.BienPlace:
               return ligne + '<span class="emoji-carre-rouge">🟪</span>';
             case LettreStatut.MalPlace:
-              return ligne + '<span class="emoji-cercle-jaune">🟡</span>';
+              return ligne + '<span class="emoji-cercle-jaune">🔵</span>';
             default:
               return ligne + '<span class="emoji-carre-bleu">🟦</span>';
           }
@@ -176,7 +176,7 @@ export default class FinDePartiePanel {
         '<div class="stats-ligne"><div class="stats-cellule">Lettres :</div>' +
         '<div class="stats-cellule">' +
         `${stats.lettresRepartitions.bienPlace} 🟪 ` +
-        `${stats.lettresRepartitions.malPlace} 🟡 ` +
+        `${stats.lettresRepartitions.malPlace} 🔵 ` +
         `${stats.lettresRepartitions.nonTrouve} 🟦` +
         "</div>" +
         "</div>" +
