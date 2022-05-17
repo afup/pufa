@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 "use strict";
 /**
  * Petit script qui nettoie le fichier des mots à trouver pour le mettre dans le format attendu par le système
@@ -12,7 +14,7 @@ let numeroGrille = Math.floor((aujourdhui - origine) / (24 * 3600 * 1000));
 
 const maxFige = numeroGrille + 1; // inclus
 
-fs.readFile("data/motsATrouve.txt", "UTF8", function (erreur, contenu) {
+fs.readFile("data_shared/motsATrouve.txt", "UTF8", function (erreur, contenu) {
   //console.log(erreur);
   var dictionnaire = contenu.split("\n");
   let motsFiges = dictionnaire.slice(0, maxFige + 1);

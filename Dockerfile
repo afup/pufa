@@ -15,4 +15,4 @@ RUN ./node_modules/.bin/tsc
 
 EXPOSE 4000
 
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "build-and-start-prod"]
