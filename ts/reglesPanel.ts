@@ -22,19 +22,17 @@ export default class ReglesPanel {
     let titre = "Règles";
     let contenu =
       "<p>" +
-      "Vous avez six essais pour deviner le mot du jour, entre 6 et 9 lettres, commun à tous.<br />" +
-      "Vous ne pouvez proposer que des mots commençant par la même lettre que le mot recherché, et qui se trouvent dans notre dictionnaire.<br />" +
-      "Les noms propres ne sont pas acceptés.<br />" +
+      "Vous avez six essais pour deviner le mot du jour, entre 6 et 9 lettres, commun à toutes et à tous.<br />" +
+      "Vous ne pouvez proposer que des mots commençant par la même lettre que le mot recherché, et qui se trouvent être des fonctions de PHP ou mots clefs réservés du langage.<br />" +
       "Le mot change chaque jour. Évitez donc les spoils et privilégiez le bouton de partage.<br />" +
       "</p>" +
       '<div class="grille">' +
       "<table>" +
       "<tr>" +
-      '<td class="resultat bien-place">S</td>' +
-      '<td class="resultat non-trouve">A</td>' +
-      '<td class="resultat non-trouve">L</td>' +
-      '<td class="resultat mal-place">U</td>' +
-      '<td class="resultat mal-place">T</td>' +
+      '<td class="resultat bien-place">A</td>' +
+      '<td class="resultat non-trouve">F</td>' +
+      '<td class="resultat non-trouve">U</td>' +
+      '<td class="resultat mal-place">P</td>' +
       "</tr>" +
       "</table>" +
       "Les lettres entourées d'un carré rouge sont bien placées,<br />" +
@@ -42,10 +40,9 @@ export default class ReglesPanel {
       "Les lettres qui restent sur fond bleu ne sont pas dans le mot.<br />" +
       "</div>" +
       "<p>" +
-      'En cas de soucis, vous pouvez contacter <a href="https://twitter.com/Jonamaths">@Jonamaths</a> sur twitter. −' +
-      '<a target="_blank" href="https://framagit.org/JonathanMM/sutom">Page du projet</a><br />' +
-      'Basé sur l\'excellent <a target="_blank" href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> et le regretté Motus.<br />' +
-      "Merci à Emmanuel pour l'aide sur les mots à trouver, et à GaranceAmarante pour l'aide sur le dictionnaire." +
+      'En cas de soucis, vous pouvez contacter <a href="https://twitter.com/afup">@afup</a> sur twitter. −' +
+      '<a target="_blank" href="https://github.com/afup/pufa">Page du projet</a><br />' +
+      'Basé sur l\'excellent <a target="_blank" href="https://sutom.nocle.fr/">SUTOM</a>. Merci à <a href="https://twitter.com/Jonamaths">@Jonamaths</a> pour son travail sur ce projet.<br />' +
       "</p>";
 
     this._panelManager.setContenu(titre, contenu);
