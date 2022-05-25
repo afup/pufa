@@ -72,7 +72,7 @@ export default class FinDePartiePanel {
     let afficherChrono = (Sauvegardeur.chargerConfig() ?? Configuration.Default).afficherChrono;
 
     const entete =
-      "SUTOM #" +
+      "PUFA #" +
       numeroGrille +
       " " +
       (estBonneReponse ? resultats.length : "-") +
@@ -109,7 +109,7 @@ export default class FinDePartiePanel {
       event.stopPropagation();
       new Promise((resolve, reject) => {
         if (window.navigator.clipboard !== undefined) {
-          return resolve(window.navigator.clipboard.writeText(this._resumeTexte + "\n\nhttps://sutom.nocle.fr"));
+          return resolve(window.navigator.clipboard.writeText(this._resumeTexte + "\n\nhttps://pufa.afup.org"));
         }
 
         return reject();
@@ -117,7 +117,7 @@ export default class FinDePartiePanel {
         .catch(
           () =>
             new Promise((resolve, reject) => {
-              if (window.navigator.share !== undefined) return resolve(navigator.share({ text: this._resumeTexte + "\n\nhttps://sutom.nocle.fr" }));
+              if (window.navigator.share !== undefined) return resolve(navigator.share({ text: this._resumeTexte + "\n\nhttps://pufa.afup.org" }));
 
               return reject();
             })
