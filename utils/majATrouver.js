@@ -28,6 +28,9 @@ fs.readFile("data_shared/motsATrouve.txt", "UTF8", function (erreur, contenu) {
         .trim()
         .replace(/^\s+|\s+$/g, "")
     )
+    .filter(function (el) {
+      return el.length > 0;
+    })
     .forEach((mot, numeroMot) =>
       new Promise((resolve, reject) => {
         let datePartie = new Date(instanceConfiguration.default.dateOrigine);
