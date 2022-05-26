@@ -97,8 +97,9 @@ h1 {
 }
 
 .grille td.resultat::after {
-  width: calc(var(--taille-cellule));
-  height: calc(var(--taille-cellule));
+  width: min(100%, calc(var(--taille-cellule)));
+  height: min(100%, calc(var(--taille-cellule)));
+  aspect-ratio: 1 / 1;
   position: absolute;
   top: 0;
   left: 0;

@@ -6,6 +6,12 @@
  * Petit script qui nettoie le fichier dictionnaire pour le mettre dans le format attendu par le système
  */
 var fs = require("fs");
+var instanceConfiguration = require("../public/js/instanceConfiguration");
+
+function range(start, end) {
+    if(start === end) return [start];
+    return [start, ...range(start + 1, end)];
+}
 
 function ecrireDictionnaire(dictionnaire, suffixeNom) {
   console.log("Écriture du dictionnaire " + (suffixeNom !== undefined ? suffixeNom : "général"));
@@ -47,6 +53,7 @@ function ecrireListeNettoyee(dictionnaire) {
 }
 
 fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
+  const defaultInstance = instanceConfiguration.default;
   //console.log(erreur);
   var dictionnaire = contenu
     .split("\n")
@@ -59,19 +66,11 @@ fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
         .replace(/\p{Diacritic}/gu, "")
     )
     .filter(
-      (mot) =>
-        !(mot[0] === mot[0].toUpperCase()) &&
-        mot.length >= 6 &&
-        mot.length <= 9 &&
-        !mot.includes("!") &&
-        !mot.includes(" ") &&
-        !mot.includes("-") &&
-        !mot.toUpperCase().startsWith("K") &&
-        !mot.toUpperCase().startsWith("Q") &&
-        !mot.toUpperCase().startsWith("W") &&
-        !mot.toUpperCase().startsWith("X") &&
-        !mot.toUpperCase().startsWith("Y") &&
-        !mot.toUpperCase().startsWith("Z")
+      (mot) => {
+        return mot.length >= defaultInstance.tailleMin &&
+          mot.length <= defaultInstance.tailleMax &&
+          undefined === mot.match(/[^A-Za-z1-9_]/g)?.length;
+      }
     )
     .filter(function (elem, index, self) {
       return index === self.indexOf(elem);
@@ -89,8 +88,8 @@ fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
   ecrireListeNettoyee(dictionnaire);
   ecrireDictionnaire(dictionnaire);
 
-  let longueurs = [6, 7, 8, 9];
-  let initialesPossibles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V"];
+  let longueurs = range(defaultInstance.tailleMin, defaultInstance.tailleMax);
+  let initialesPossibles = ["_", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V"];
   for (let longueur of longueurs) {
     for (let initiale of initialesPossibles) {
       let dicoFiltre = dictionnaire.filter((mot) => mot.length === longueur && mot.toUpperCase().startsWith(initiale));
