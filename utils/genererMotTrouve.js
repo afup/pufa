@@ -7,10 +7,18 @@
  */
 var fs = require("fs");
 var readlineSync = require("readline-sync");
+var instanceConfiguration = require("../public/js/instanceConfiguration");
 
 function start() {
+
+  if (!fs.existsSync("data_shared")){
+    fs.mkdirSync("data_shared");
+  }
+
   fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
     //console.log(erreur);
+    const defaultInstance = instanceConfiguration.default;
+
     var dictionnaire = contenu.split("\n");
       var motTrouve = false;
       var mot = "";
@@ -18,19 +26,11 @@ function start() {
         var position = Math.floor(Math.random() * dictionnaire.length);
         mot = dictionnaire[position];
         let motAnalyse = mot.normalize("NFD").replace(/\p{Diacritic}/gu, "");
-        motTrouve =
-          !(motAnalyse[0] === motAnalyse[0].toUpperCase()) &&
-          motAnalyse.length >= 6 &&
-          motAnalyse.length <= 9 &&
-          !motAnalyse.includes("!") &&
-          !motAnalyse.includes(" ") &&
-          !motAnalyse.includes("-") &&
-          !mot.toUpperCase().startsWith("K") &&
-          !mot.toUpperCase().startsWith("Q") &&
-          !mot.toUpperCase().startsWith("W") &&
-          !mot.toUpperCase().startsWith("X") &&
-          !mot.toUpperCase().startsWith("Y") &&
-          !mot.toUpperCase().startsWith("Z");
+
+        motTrouve = mot.length >= defaultInstance.tailleMin &&
+          mot.length <= defaultInstance.tailleMax &&
+          undefined === mot.match(/[^A-Za-z1-9_]/g)?.length;
+
       } while (!motTrouve);
       console.log(mot);
 
