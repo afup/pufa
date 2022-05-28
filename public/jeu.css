@@ -1,9 +1,11 @@
 :root {
+  --rouge-afup: #ed0678;
+  --bleu-clair-afup: #36a7df;
   --taille-cellule: 48px;
   --epaisseur-bordure-cellule: 1px;
   --epaisseur-padding-cellule: 2px;
-  --couleur-bien-place: #ed0678;
-  --couleur-mal-place: #36a7df;
+  --couleur-bien-place: var(--rouge-afup);
+  --couleur-mal-place: var(--bleu-clair-afup);
   --couleur-fond-grille: rgb(29, 34, 65);
   --couleur-non-trouve: rgb(112, 112, 112);
   --couleur-icone: rgb(200, 200, 200);
@@ -351,4 +353,52 @@ h1 {
 
 .emoji-carre-bleu {
   color: skyblue;
+}
+
+
+#contenu.super-apero header {
+  grid-template-columns: 1fr;
+}
+
+#contenu.super-apero {
+  justify-content: normal;
+}
+
+.super-apero--links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: 100px;
+  padding: 0;
+}
+
+@media (max-height: 640px), (max-width: 400px) {
+  .super-apero--links {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 70px;
+    padding: 10px;
+  }
+}
+
+
+.super-apero--links li {
+  display: inline-block;
+}
+
+.super-apero--links li a {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bleu-clair-afup);
+  color: var(--couleur-police);
+  border: 1px solid var(--couleur-bordure);
+  text-decoration: none;
+}
+
+.super-apero--links li a:hover {
+  background-color: var(--rouge-afup);
 }
