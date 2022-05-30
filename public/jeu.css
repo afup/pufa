@@ -52,6 +52,7 @@ header {
   border-bottom: 1px solid var(--couleur-bordure);
   margin-top: 0.1em;
   margin-bottom: 0.25em;
+  background-color: #4c6eaf;
 }
 
 h1 {
@@ -401,4 +402,44 @@ h1 {
 
 .super-apero--links li a:hover {
   background-color: var(--rouge-afup);
+}
+
+#afup-global-menu {
+  text-align: center;
+  background-color: #1d2241;
+  height: 30px;
+  color: #fff
+}
+#afup-global-menu .lien-entete {
+  box-sizing: border-box;
+  font-family: Roboto, Helvetica, sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  color: #fff;
+  padding: 4px 15px;
+  text-decoration: none;
+  height: 30px;
+  display: inline-block;
+  line-height: 1.55;
+}
+#afup-global-menu .lien-entete:hover {
+  background-color: #36a7df;
+}
+
+#afup-global-menu .lien-entete__active {
+  background-color: #36a7df;
+}
+
+@media (max-width: 768px) {
+  #afup-global-menu {
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+  }
+}
+
+@media (max-width: 460px) {
+  #afup-global-menu {
+      display: none;
+  }
 }
