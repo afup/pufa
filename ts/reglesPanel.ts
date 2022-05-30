@@ -36,8 +36,8 @@ export default class ReglesPanel {
       "</tr>" +
       "</table>" +
       "Les lettres entourées d'un carré rouge sont bien placées,<br />" +
-      "les lettres entourées d'un cercle jaune sont mal placées (mais présentes dans le mot).<br />" +
-      "Les lettres qui restent sur fond bleu ne sont pas dans le mot.<br />" +
+      "les lettres entourées d'un cercle bleu clair sont mal placées (mais présentes dans le mot).<br />" +
+      "Les lettres qui restent sur fond bleu foncé ne sont pas dans le mot.<br />" +
       "</div>" +
       "<p>" +
       'En cas de soucis, vous pouvez contacter <a href="https://twitter.com/afup">@afup</a> sur twitter. −' +
