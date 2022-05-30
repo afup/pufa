@@ -1,3 +1,5 @@
+import InstanceConfiguration from "./instanceConfiguration";
+
 export default class Dictionnaire {
   public constructor() {}
 
@@ -32,10 +34,18 @@ export default class Dictionnaire {
     return btoa(idPartie + "-" + datePartieStr);
   }
 
-  public static async estMotValide(mot: string, premiereLettre: string, longueur: number): Promise<boolean> {
+  public static async estMotValide(
+    mot: string, premiereLettre: string,
+    longueur: number,
+    tailleMin: number,
+    tailleMax: number
+  ): Promise<boolean> {
     mot = this.nettoyerMot(mot);
     let ListeMotsProposables = await import("./mots/listeMotsProposables." + longueur + "." + premiereLettre);
-    return mot.length >= 6 && mot.length <= 9 && ListeMotsProposables.default.Dictionnaire.includes(mot);
+    return mot.length >= tailleMin
+      && mot.length <= tailleMax
+      && ListeMotsProposables.default.Dictionnaire.includes(mot)
+    ;
   }
 
   public static nettoyerMot(mot: string): string {
