@@ -24,9 +24,8 @@ const termsSuperApero = {
 
 for (const [idPartie, mot] of Object.entries(termsSuperApero)) {
   new Promise((resolve, reject) => {
-    let datePartie = aujourdhui;
-
-    datePartie.setDate(datePartie.getDate());
+    let datePartie = new Date(aujourdhui);
+    datePartie.setDate(datePartie.getDate() + 1);
 
     let datePartieStr =
       datePartie.getFullYear().toString() +
