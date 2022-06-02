@@ -383,7 +383,7 @@ h1 {
   padding: 0;
 }
 
-@media (max-height: 640px), (max-width: 400px) {
+@media (max-width: 768px) {
   .super-apero--links {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
@@ -391,7 +391,6 @@ h1 {
     padding: 10px;
   }
 }
-
 
 .super-apero--links li {
   display: inline-block;
@@ -406,7 +405,6 @@ h1 {
 
   background-color: var(--bleu-clair-afup);
   color: var(--couleur-police);
-  border: 1px solid var(--couleur-bordure);
   text-decoration: none;
 }
 
