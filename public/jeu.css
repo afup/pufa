@@ -390,6 +390,10 @@ h1 {
     grid-auto-rows: 70px;
     padding: 10px;
   }
+
+  .hide-responsive {
+    display: none;
+  }
 }
 
 .super-apero--links li {

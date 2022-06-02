@@ -15,10 +15,12 @@ import ConfigurationPanel from "./configurationPanel";
 import AudioPanel from "./audioPanel";
 import ThemeManager from "./themeManager";
 import InstanceConfiguration from "./instanceConfiguration";
+import Entete from "./entete";
 
 export default class Gestionnaire {
   private _grille: Grille | null = null;
   private _input: Input | null = null;
+  private _entete: Entete | null = null;
   private readonly _reglesPanel: ReglesPanel;
   private readonly _finDePartiePanel: FinDePartiePanel;
   private readonly _configurationPanel: ConfigurationPanel;
@@ -73,6 +75,7 @@ export default class Gestionnaire {
         this._input = new Input(this, this._config, this._motATrouver.length, this._motATrouver[0]);
         this._panelManager.setInput(this._input);
         this._grille = new Grille(this._motATrouver.length, this._maxNbPropositions, this._motATrouver[0], this._audioPanel);
+        this._entete = new Entete(this._idPartieEnCours)
         this._configurationPanel.setInput(this._input);
         this._compositionMotATrouver = this.decompose(this._motATrouver);
         await this.chargerPropositions(partieEnCours.propositions);
