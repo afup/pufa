@@ -40,28 +40,34 @@ body {
   margin-left: 25%;
   margin-right: 25%;
   justify-content: space-between;
-  height: 100%;
+  height: calc(100% - 120px);
 }
 
 header {
+  display: block;
+  border-bottom: 1px solid var(--couleur-bordure);
+  margin-bottom: 0.25em;
+  background-color: #4c6eaf;
+}
+
+.header--game {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid var(--couleur-bordure);
-  margin-top: 0.1em;
-  margin-bottom: 0.25em;
-  background-color: #4c6eaf;
+
 }
 
 h1 {
   margin: 0;
+  font-size: 48px;
+  padding: 10px;
 }
 
 .header-icones {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 #configuration-regles-icone,
@@ -407,9 +413,12 @@ h1 {
 #afup-global-menu {
   text-align: center;
   background-color: #1d2241;
-  height: 30px;
-  color: #fff
+  color:  var(--couleur-police);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
+
 #afup-global-menu .lien-entete {
   box-sizing: border-box;
   font-family: Roboto, Helvetica, sans-serif;
@@ -418,8 +427,7 @@ h1 {
   color: #fff;
   padding: 4px 15px;
   text-decoration: none;
-  height: 30px;
-  display: inline-block;
+  display: inline-flex;
   line-height: 1.55;
 }
 #afup-global-menu .lien-entete:hover {
@@ -430,13 +438,6 @@ h1 {
   background-color: #36a7df;
 }
 
-@media (max-width: 768px) {
-  #afup-global-menu {
-      position: fixed;
-      width: 100%;
-      z-index: 10;
-  }
-}
 
 @media (max-width: 460px) {
   #afup-global-menu {
