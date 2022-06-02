@@ -1,12 +1,13 @@
 :root {
   --rouge-afup: #ed0678;
   --bleu-clair-afup: #36a7df;
+  --bleu-fonce-afup: #1d2241;
   --taille-cellule: 48px;
   --epaisseur-bordure-cellule: 1px;
   --epaisseur-padding-cellule: 2px;
   --couleur-bien-place: var(--rouge-afup);
   --couleur-mal-place: var(--bleu-clair-afup);
-  --couleur-fond-grille: rgb(29, 34, 65);
+  --couleur-fond-grille: var(--bleu-fonce-afup);
   --couleur-non-trouve: rgb(112, 112, 112);
   --couleur-icone: rgb(200, 200, 200);
   --couleur-fond-rgb: 29, 34, 65;
@@ -45,9 +46,11 @@ body {
 
 header {
   display: block;
-  border-bottom: 1px solid var(--couleur-bordure);
   margin-bottom: 0.25em;
-  background-color: #4c6eaf;
+  background-image: url(/assets/logo.svg);
+  background-color: var(--bleu-fonce-afup);
+  background-size: cover;
+  background-position-y: 63%;
 }
 
 .header--game {
@@ -63,6 +66,7 @@ h1 {
   margin: 0;
   font-size: 48px;
   padding: 10px;
+  color: var(--couleur-police);
 }
 
 .header-icones {
