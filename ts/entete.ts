@@ -16,6 +16,9 @@ export default class Entete {
       return;
     }
 
-    this._title.innerHTML = 'PUFA <span class="hide-responsive">- Super Apéro 2022 </span>#' + this._idPartieEnCours.split('-').slice(-1);
+    this._title.innerHTML = `<a href="/super-apero.html">
+        PUFA <span class="hide-responsive"> - Super Apéro 2022</span >
+        #${this._idPartieEnCours.split('-').slice(-1)}`
+    ;
   }
 }
