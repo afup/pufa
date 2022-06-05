@@ -185,10 +185,6 @@ export default class Gestionnaire {
       NotificationMessage.ajouterNotification("Le mot proposé doit commencer par la même lettre que le mot recherché.");
       return false;
     }
-    if (!(await Dictionnaire.estMotValide(mot, this._motATrouver[0], this._motATrouver.length, InstanceConfiguration.tailleMin, InstanceConfiguration.tailleMax))) {
-      NotificationMessage.ajouterNotification("Ce mot n'est pas dans notre dictionnaire.");
-      return false;
-    }
     if (!this._datePartieEnCours) this._datePartieEnCours = new Date();
     let resultats = this.analyserMot(mot);
     let isBonneReponse = resultats.every((item) => item.statut === LettreStatut.BienPlace);
