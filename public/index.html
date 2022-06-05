@@ -13,34 +13,47 @@
     <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
+
+  <header>
+    <div id="afup-global-menu">
+      <a href="https://afup.org" class="lien-entete">AFUP</a>
+      <a href="https://event.afup.org" class="lien-entete">Forum PHP 2022</a>
+      <a href="https://barometre.afup.org" class="lien-entete">Baromètre</a>
+      <a href="http://www.planete-php.fr" class="lien-entete">Planète PHP</a>
+      <a href="https://pufa.afup.org" class="lien-entete lien-entete__active">PUFA</a>
+    </div>
+
+    <div class="header--game">
+      <div class="header-icones">
+        <a href="#" id="configuration-regles-bouton">
+          <svg id="configuration-regles-icone">
+            <use href="#icone-regles" stroke="var(--couleur-icone)" fill="var(--couleur-icone)"></use>
+          </svg>
+        </a>
+        <a href="#" id="configuration-stats-bouton">
+          <svg id="configuration-stats-icone">
+            <use href="#icone-stats" stroke="var(--couleur-icone)"></use>
+          </svg>
+        </a>
+      </div>
+      <h1>PUFA</h1>
+      <div class="header-icones">
+        <a href="#" id="configuration-audio-bouton">
+          <svg id="configuration-audio-icone">
+            <use href="#icone-son-active" fill="var(--couleur-icone)"></use>
+          </svg>
+        </a>
+        <a href="#" id="configuration-config-bouton">
+          <svg id="configuration-config-icone">
+            <use href="#icone-config" fill="var(--couleur-icone)"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
     <div id="contenu">
-      <header>
-        <div class="header-icones">
-          <a href="#" id="configuration-regles-bouton">
-            <svg id="configuration-regles-icone">
-              <use href="#icone-regles" stroke="var(--couleur-icone)" fill="var(--couleur-icone)"></use>
-            </svg>
-          </a>
-          <a href="#" id="configuration-stats-bouton">
-            <svg id="configuration-stats-icone">
-              <use href="#icone-stats" stroke="var(--couleur-icone)"></use>
-            </svg>
-          </a>
-        </div>
-        <h1>PUFA</h1>
-        <div class="header-icones">
-          <a href="#" id="configuration-audio-bouton">
-            <svg id="configuration-audio-icone">
-              <use href="#icone-son-active" fill="var(--couleur-icone)"></use>
-            </svg>
-          </a>
-          <a href="#" id="configuration-config-bouton">
-            <svg id="configuration-config-icone">
-              <use href="#icone-config" fill="var(--couleur-icone)"></use>
-            </svg>
-          </a>
-        </div>
-      </header>
       <div id="notification"> </div>
       <div id="panel-area">
         <div id="panel-fenetre">

@@ -1,12 +1,13 @@
 :root {
   --rouge-afup: #ed0678;
   --bleu-clair-afup: #36a7df;
+  --bleu-fonce-afup: #1d2241;
   --taille-cellule: 48px;
   --epaisseur-bordure-cellule: 1px;
   --epaisseur-padding-cellule: 2px;
   --couleur-bien-place: var(--rouge-afup);
   --couleur-mal-place: var(--bleu-clair-afup);
-  --couleur-fond-grille: rgb(29, 34, 65);
+  --couleur-fond-grille: var(--bleu-fonce-afup);
   --couleur-non-trouve: rgb(112, 112, 112);
   --couleur-icone: rgb(200, 200, 200);
   --couleur-fond-rgb: 29, 34, 65;
@@ -40,27 +41,47 @@ body {
   margin-left: 25%;
   margin-right: 25%;
   justify-content: space-between;
-  height: 100%;
+  height: calc(100% - 120px);
 }
 
 header {
+  display: block;
+  margin-bottom: 0.25em;
+  background-image: url(/assets/logo.svg);
+  background-color: var(--bleu-fonce-afup);
+  background-size: cover;
+  background-position-y: 63%;
+}
+
+.header--game {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid var(--couleur-bordure);
-  margin-top: 0.1em;
-  margin-bottom: 0.25em;
+
 }
 
 h1 {
   margin: 0;
+  font-size: 40px;
+  padding: 10px;
+  color: var(--couleur-police);
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .header-icones {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.header-icones a {
+  display: flex;
+  align-items: center;
 }
 
 #configuration-regles-icone,
@@ -372,15 +393,18 @@ h1 {
   padding: 0;
 }
 
-@media (max-height: 640px), (max-width: 400px) {
+@media (max-width: 768px) {
   .super-apero--links {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     grid-auto-rows: 70px;
     padding: 10px;
   }
-}
 
+  .hide-responsive {
+    display: none;
+  }
+}
 
 .super-apero--links li {
   display: inline-block;
@@ -395,10 +419,44 @@ h1 {
 
   background-color: var(--bleu-clair-afup);
   color: var(--couleur-police);
-  border: 1px solid var(--couleur-bordure);
   text-decoration: none;
 }
 
 .super-apero--links li a:hover {
   background-color: var(--rouge-afup);
+}
+
+#afup-global-menu {
+  text-align: center;
+  background-color: #1d2241;
+  color:  var(--couleur-police);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+#afup-global-menu .lien-entete {
+  box-sizing: border-box;
+  font-family: Roboto, Helvetica, sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  color: #fff;
+  padding: 4px 15px;
+  text-decoration: none;
+  display: inline-flex;
+  line-height: 1.55;
+}
+#afup-global-menu .lien-entete:hover {
+  background-color: #36a7df;
+}
+
+#afup-global-menu .lien-entete__active {
+  background-color: #36a7df;
+}
+
+
+@media (max-width: 460px) {
+  #afup-global-menu {
+      display: none;
+  }
 }
