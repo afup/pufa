@@ -1,5 +1,6 @@
 config/
 data/*
+data_shared/*
 !data/mots.txt
 public/js/
 public/mots/**
@@ -8,3 +9,4 @@ node_modules/
 ts/mots/listeMotsATrouver.ts
 ts/mots/listeMotsProposables.*
 cron.*.sh
+docker-compose.override.yml

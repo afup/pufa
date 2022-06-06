@@ -44,4 +44,8 @@ function start() {
   });
 }
 
-start();
+var items = parseInt(process.argv[2], 10) || 1;
+for (let i=1; i<= items; i++) {
+  start();
+}
+

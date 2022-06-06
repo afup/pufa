@@ -1,0 +1,5 @@
+version: "2.2"
+services:
+  node:
+    ports:
+      - "4012:4000"
