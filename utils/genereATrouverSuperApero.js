@@ -22,10 +22,16 @@ const termsSuperApero = {
   "super-apero-2022-question-10": "POSIX_SETUID",
 };
 
+
+var increment = 1
+if (process.argv.length > 2) {
+  increment = parseInt(process.argv[2], 10);
+}
+
 for (const [idPartie, mot] of Object.entries(termsSuperApero)) {
   new Promise((resolve, reject) => {
     let datePartie = new Date(aujourdhui);
-    datePartie.setDate(datePartie.getDate() + 1);
+    datePartie.setDate(datePartie.getDate() + increment);
 
     let datePartieStr =
       datePartie.getFullYear().toString() +
