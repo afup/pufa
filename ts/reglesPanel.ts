@@ -43,7 +43,7 @@ export default class ReglesPanel {
       'En cas de soucis, vous pouvez contacter <a href="https://twitter.com/afup">@afup</a> sur twitter. −' +
       '<a target="_blank" href="https://github.com/afup/pufa">Page du projet</a><br />' +
       'Basé sur l\'excellent <a target="_blank" href="https://sutom.nocle.fr/">SUTOM</a>. Merci à <a href="https://twitter.com/Jonamaths">@Jonamaths</a> pour son travail sur ce projet.<br />' +
-      'Gracieusement hébergé sur <a href="https://www.clever-cloud.com/">Clever Cloud</a>.<br />'+
+      'Gracieusement hébergé sur <a target="_blank" href="https://www.clever-cloud.com/">Clever Cloud</a>.<br />'+
       "</p>";
 
     this._panelManager.setContenu(titre, contenu);
