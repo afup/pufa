@@ -8,3 +8,4 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
+      - ./docker/data/npm:/.npm
