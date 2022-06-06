@@ -7,7 +7,7 @@ docker-up: dirs docker-compose.override.yml
 
 init: dirs
 	make node_modules
-	docker-compose run --user=$(CURRENT_UID) --rm node /app/node_modules/.bin/tsc
+	docker-compose run --user=$(CURRENT_UID) --rm node /app/build.sh
 	docker-compose run --user=$(CURRENT_UID) --rm node /app/utils/genererMotTrouve.js $(MOTS_A_GENERER)
 	docker-compose run --user=$(CURRENT_UID) --rm node /app/utils/genereATrouverSuperApero.js 0
 	docker-compose run --user=$(CURRENT_UID) --rm node /app/utils/majATrouver.js
