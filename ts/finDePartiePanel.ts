@@ -152,6 +152,10 @@ export default class FinDePartiePanel {
           Peut-être feras-tu mieux demain ? \
         </p>";
       }
+
+      contenu += '<p class="fin-de-partie-panel-phrase">Voir le mot sur \
+        <a href="https://www.php.net/manual-lookup.php?pattern=' +  this._motATrouver + '&scope=quickref">php.net</a>.</p>';
+
       contenu +=
         '<p>Résumé de ta partie − <a href="#" id="fin-de-partie-panel-resume-bouton">Partager</a></p> \
           <pre id="fin-de-partie-panel-resume">' +
