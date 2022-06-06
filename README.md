@@ -14,8 +14,9 @@ Par défaut:
 ## Mise en place avec docker
 
 * cloner le dépot
-* effectuer un `make docker-up` pour la création de l'infrastructure sous docker
 * effectuer un `make init` pour la copie des fichiers de config par défaut, l'installation des dépendances ainsi que l'init de la base de donnée avec les données de test.
+* effectuer un `make docker-up` pour la création de l'infrastructure sous docker
+
 
 ### Autres commandes
 
