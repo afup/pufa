@@ -1,0 +1,11 @@
+version: "2.2"
+
+services:
+  node:
+    build: ./docker/dockerfiles/node
+    environment:
+      AFUP_HEADER_EVENT_LABEL: "Nom Event"
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ./docker/data/npm:/.npm
