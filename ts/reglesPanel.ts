@@ -22,9 +22,9 @@ export default class ReglesPanel {
     let titre = "Règles";
     let contenu =
       "<p>" +
-      "Vous avez six essais pour deviner le mot du jour, entre 6 et 9 lettres, commun à toutes et à tous.<br />" +
-      "Vous ne pouvez proposer que des mots commençant par la même lettre que le mot recherché, et qui se trouvent être des fonctions de PHP ou des mots clefs réservés du langage.<br />" +
-      "Le mot change chaque jour. Évitez donc les spoils et privilégiez le bouton de partage.<br />" +
+      "Vous avez six essais pour deviner le mot du jour qui se trouve être une fonction de PHP ou un mot clef réservé du langage entre 6 et 12 lettres.<br />" +
+      "Vous ne pouvez proposer que des mots commençant par la même lettre que le mot recherché.<br />" +
+      "Le mot change chaque jour et est commun à toutes et à tous. Évitez donc les spoils et privilégiez le bouton de partage.<br />" +
       "</p>" +
       '<div class="grille">' +
       "<table>" +
