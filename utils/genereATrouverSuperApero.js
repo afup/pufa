@@ -5,21 +5,20 @@
  * Petit script qui nettoie le fichier des mots à trouver pour le mettre dans le format attendu par le système
  */
 var fs = require("fs");
-var instanceConfiguration = require("../public/js/instanceConfiguration");
 
 let aujourdhui = new Date();
 
 const termsSuperApero = {
-  "super-apero-2022-question-1": "POSIX_ACCESS",
-  "super-apero-2022-question-2": "POSIX_GETCWD",
-  "super-apero-2022-question-3": "POSIX_GETGID",
-  "super-apero-2022-question-4": "POSIX_GETPID",
-  "super-apero-2022-question-5": "POSIX_GETSID",
-  "super-apero-2022-question-6": "POSIX_GETUID",
-  "super-apero-2022-question-7": "POSIX_ISATTY",
-  "super-apero-2022-question-8": "POSIX_MKFIFO",
-  "super-apero-2022-question-9": "POSIX_SETGID",
-  "super-apero-2022-question-10": "POSIX_SETUID",
+  "super-apero-2022-question-1": "UCFIRST",
+  "super-apero-2022-question-2": "FWRITE",
+  "super-apero-2022-question-3": "ARRAY_SPLICE",
+  "super-apero-2022-question-4": "OB_END_FLUSH",
+  "super-apero-2022-question-5": "IMPLEMENTS",
+  "super-apero-2022-question-6": "MB_SPLIT",
+  "super-apero-2022-question-7": "PHPVERSION",
+  "super-apero-2022-question-8": "STRNCASECMP",
+  "super-apero-2022-question-9": "GC_ENABLED",
+  "super-apero-2022-question-10": "FINALLY",
 };
 
 
