@@ -477,6 +477,9 @@ h1 a {
 .super-apero--links li a:hover {
   background-color: var(--rouge-afup);
 }
+#super-apero-title a {
+  color: var(--couleur-police);
+}
 
 #afup-global-menu {
   text-align: center;
