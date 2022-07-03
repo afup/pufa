@@ -29,7 +29,7 @@ function start() {
 
         motTrouve = mot.length >= defaultInstance.tailleMin &&
           mot.length <= defaultInstance.tailleMax &&
-          undefined === mot.match(/[^A-Za-z1-9_]/g)?.length;
+          undefined === mot.match(/[^A-Za-z_]/g)?.length;
 
       } while (!motTrouve);
       console.log(mot);

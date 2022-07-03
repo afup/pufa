@@ -69,7 +69,7 @@ fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
       (mot) => {
         return mot.length >= defaultInstance.tailleMin &&
           mot.length <= defaultInstance.tailleMax &&
-          undefined === mot.match(/[^A-Za-z1-9_]/g)?.length;
+          undefined === mot.match(/[^A-Za-z_]/g)?.length;
       }
     )
     .filter(function (elem, index, self) {
