@@ -89,7 +89,7 @@ fs.readFile("data/mots.txt", "UTF8", function (erreur, contenu) {
   ecrireDictionnaire(dictionnaire);
 
   let longueurs = range(defaultInstance.tailleMin, defaultInstance.tailleMax);
-  let initialesPossibles = ["_", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V"];
+  let initialesPossibles = ["_", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "Y", "Y", "Z"];
   for (let longueur of longueurs) {
     for (let initiale of initialesPossibles) {
       let dicoFiltre = dictionnaire.filter((mot) => mot.length === longueur && mot.toUpperCase().startsWith(initiale));
