@@ -4,7 +4,7 @@ services:
   node:
     build: ./docker/dockerfiles/node
     environment:
-      AFUP_HEADER_EVENT_LABEL: "Nom Event"
+      AFUP_GLOBAL_MENU_EVENT_LABEL: "Nom Event"
     working_dir: /app
     volumes:
       - ./:/app

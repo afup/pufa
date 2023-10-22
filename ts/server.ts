@@ -14,8 +14,8 @@ const port = parseInt(String(process.env.PUFA_PORT), 10) || 4000;
         return /text\/html/.test(response.get('Content-Type'));
       },
       intercept: function(body: any, send: Function) {
-        const label = process.env.AFUP_HEADER_EVENT_LABEL || "Event";
-        body = body.replace("[AFUP_HEADER_EVENT_LABEL]", label)
+        const label = process.env.AFUP_GLOBAL_MENU_EVENT_LABEL || "Event";
+        body = body.replace("[AFUP_GLOBAL_MENU_EVENT_LABEL]", label)
         send(body)
       }
     };
