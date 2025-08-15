@@ -12,7 +12,12 @@ let origine = instanceConfiguration.default.dateOrigine.getTime();
 
 let numeroGrille = Math.floor((aujourdhui - origine) / (24 * 3600 * 1000));
 
-const maxFige = numeroGrille + 1; // inclus
+// avant on ajoutait juste 1 pour calculer le mot du lendemain
+// mais dans le fichier motsATrouve.txt on a parfois des lignes vides
+// celles-ci sont ignorées, et on se retrouve donc avec pas suffisament de mots pour calculer les mots nécéssaires
+// on augmente un peu la limite de mots autorisés, afin d'éviter ce problème
+// (idéalement il aurait fallu enlever le slice, mais ça aurait demandé plus de tests, ici on va déjà faire ce premier fix)
+const maxFige = numeroGrille + 25; // inclus
 
 fs.readFile("data_shared/motsATrouve.txt", "UTF8", function (erreur, contenu) {
   //console.log(erreur);
